@@ -1,0 +1,53 @@
+Keystore:-awesome
+password for both:-password
+
+
+1) Changes in node module library:-
+ "react-native-video-helper": "^1.4.4"
+
+actual:
+  case COMPRESS_QUALITY_LOW:
+                maxWidth = 720;
+                maxHeight = 720;
+                bitrate = 1300000;
+                break;
+
+                //float finalRatio = bestRatio < 1 ? bestRatio : 1;
+
+                after change:-
+                case COMPRESS_QUALITY_LOW:
+                maxWidth = 720;
+                maxHeight = 720;
+                bitrate = 500000;
+                break;
+
+                1) For Good Quailty:-
+                A) 150 MB Video:-
+                maxWidth = 480;
+                maxHeight = 360;
+                bitrate = 120000;
+                After compress video output:-
+                150MB ----> 19.23MP
+                Video Quality level: Good
+
+                2) For Average Quailty:-
+                A) 150MB Video:-
+                maxWidth = 480;
+                maxHeight = 360;
+                bitrate = 110000;
+                After compress video output:-
+                150MB ----> 17.23MP
+                Video Quality level: Average
+
+                B) 478.2MB Video:-
+                maxWidth = 480;
+                maxHeight = 360;
+                bitrate = 110000;
+                After compress video output:-
+                150MB ----> 107MP
+                Video Quality level: Average
+
+                ios
+                CGFloat maxWidth = 720;
+                CGFloat maxHeight = 720;
+                CGFloat bitrate = 1300000;
